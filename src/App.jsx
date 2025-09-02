@@ -1,14 +1,11 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Main from "./components/Main";
+import useSwitch from "./CustomHook/useSwitch";
 
 export default function App() {
+  const [isOn, toggle] = useSwitch();
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <div>
+      <h1>Il valore è: {isOn ? "ON" : "OFF"}</h1>
+      <button onClick={toggle}>Cambia Stato</button>
+    </div>
   );
 }
