@@ -1,3 +1,5 @@
+/*/ sneck1 /*/
+
 // import useSwitch from "./CustomHook/useSwitch";
 
 // export default function App() {
@@ -9,14 +11,30 @@
 //     </div>
 //   );
 
-import useDate from "./CustomHook/useDate";
+/*/ sneck2 /*/
+
+// import useDate from "./CustomHook/useDate";
+// export default function App() {
+//   const currentDate = useDate();
+
+//   return (
+//     <div>
+//       <h1>Data e ora attuali:</h1>
+//       <p>{currentDate.toLocaleString()}</p>
+//     </div>
+//   );
+// }
+
+/*/ sneck3 /*/
+
+import useCustomPointer from "./CustomHook/customPointer";
 export default function App() {
-  const currentDate = useDate();
+  const customPointer = useCustomPointer("🔥");
 
   return (
     <div>
-      <h1>Data e ora attuali:</h1>
-      <p>{currentDate.toLocaleString()}</p>
+      <h1>Sposta il mouse per vedere il cursore personalizzato!</h1>
+      {customPointer}
     </div>
   );
 }
