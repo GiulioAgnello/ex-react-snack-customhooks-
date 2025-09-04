@@ -27,14 +27,29 @@
 
 /*/ sneck3 /*/
 
-import useCustomPointer from "./CustomHook/customPointer";
+// import useCustomPointer from "./CustomHook/customPointer";
+// export default function App() {
+//   const customPointer = useCustomPointer("🔥");
+
+//   return (
+//     <div>
+//       <h1>Sposta il mouse per vedere il cursore personalizzato!</h1>
+//       {customPointer}
+//     </div>
+//   );
+// }
+
+/*/ sneckBonus /*/
+
+import useKeyPress from "./CustomHook/useKeyPress";
+
 export default function App() {
-  const customPointer = useCustomPointer("🔥");
+  const isPressed = useKeyPress("Enter");
 
   return (
     <div>
-      <h1>Sposta il mouse per vedere il cursore personalizzato!</h1>
-      {customPointer}
+      <h1>Tieni premuto "Enter" per testare il custom hook</h1>
+      <p>{isPressed ? "Enter premuto! ✅" : "Aspettando input... ⌨️"}</p>
     </div>
   );
 }
